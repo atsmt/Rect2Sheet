@@ -1,6 +1,6 @@
 {
-    "id": 2,
-    "num_rectangles": 2,
-    "has_mounts": false,
-    "allow_non_90": false
+  "id": 2,
+  "num_rectangles": 2,
+  "has_mounts": false,
+  "allow_non_90": false
 }

@@ -1,9 +1,9 @@
 {
-    "id": 47,
-    "rectangle_id": "30_rectangle",
-    "num_rectangles": 4,
-    "has_mounts": true,
-    "allow_non_90": false,
-    "has_split_tabs": false,
-    "source_set": "accepted"
+  "id": 47,
+  "rectangle_id": "30_rectangle",
+  "num_rectangles": 4,
+  "has_mounts": true,
+  "allow_non_90": false,
+  "has_split_tabs": false,
+  "source_set": "accepted"
 }
