@@ -1,0 +1,10 @@
+{
+    "id": 613,
+    "rectangle_id": "48_rectangle",
+    "num_rectangles": 4,
+    "has_mounts": false,
+    "allow_non_90": false,
+    "has_split_tabs": false,
+    "source_set": "discarded",
+    "discard_reason": "Too thin segments"
+}
