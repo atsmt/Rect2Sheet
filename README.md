@@ -11,7 +11,7 @@ SheetGen repository: https://github.com/chriswitt77/SheetGen
 The full dataset release is available on Zenodo: https://doi.org/10.5281/zenodo.20834240
 
 This repository contains test subsets of the dataset:
-- `dataset_test_1`: 74 designs
+- `dataset_test_1`: 30 designs
 - `dataset_test_2`: 610 designs
 
 ## Recreate this dataset or create your own new dataset
