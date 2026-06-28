@@ -2,7 +2,7 @@
 
 ## Description
 
-A synthetic dataset of **19,231 sheet-metal designs** pairing rectangle layouts with their
+A synthetic and manually verified dataset of **19,231 sheet-metal designs** pairing rectangle layouts with their
 sheet-metal solutions, plus a parallel set of discarded examples.
 
 Built for training and evaluating models that turn tabs into bent parts. Generated with the
@@ -13,6 +13,12 @@ The full dataset release is available on Zenodo: https://doi.org/10.5281/zenodo.
 This repository contains test subsets of the dataset:
 - `dataset_test_1`: 74 designs
 - `dataset_test_2`: 610 designs
+
+## Recreate this dataset or create your own new dataset
+
+It is easy to regenerate the dataset using the SheetGen repository. The README.md of the SheetGen repo provides instructions for running the pipeline. It can simply be done via a GUI.
+
+With the SheetGen repo, you can also create a dataset with infinite variations of rectangle layouts, tab counts, and solution topologies, and the size of the dataset can be far greater than the Rect2Sheet dataset.
 
 ## Contents
 
