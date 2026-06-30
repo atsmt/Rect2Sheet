@@ -3,7 +3,7 @@
 ## Description
 
 A synthetic and manually verified dataset of **19,231 sheet-metal designs** pairing rectangle layouts with their
-sheet-metal solutions, plus a parallel set of discarded examples.
+sheet-metal solutions, plus a parallel set of discarded examples. Additionally provided are also datasets with 80,028 unvalidated designs.
 
 Built for training and evaluating models that turn tabs into bent parts. Generated with the
 SheetGen repository: https://github.com/chriswitt77/SheetGen
@@ -47,7 +47,7 @@ Synthetic pipeline in `src/dataset`, configured via `config/config.yaml`:
    manufacturability filters (tool collision, unfolding overlap, thin segments) split them into
    **accepted** vs **discarded**; up to 12 diverse solutions per design are kept. For solutions
    with mounts, input rectangles can also be split into two.
-3. **Verification**: The author manually inspected all generated solutions and discarded edge cases.
+3. **Verification**: The author manually inspected all generated solutions and discarded edge cases (for example designs with too thing parts).
 4. **Packaging**: Pairs accepted solutions with their rectangles, strips simulation-only fields,
    and emits clean JSON triples plus FeatureScript.
 
