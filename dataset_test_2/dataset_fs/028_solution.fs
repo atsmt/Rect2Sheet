@@ -12,10 +12,10 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
 
         // === Root Tab 0 ===
         var sketch0 = newSketchOnPlane(context, id + "sketch0", { "sketchPlane" : plane(vector(0.0, 0.0, 0.0) * millimeter, vector(0.0, 0.0, 1.0), vector(1.0, 0.0, 0.0)) });
-        skPolyline(sketch0, "poly0", { "points" : [vector(0.000000, 220.000000) * millimeter, vector(70.000000, 220.000000) * millimeter, vector(70.000000, 0.000000) * millimeter, vector(0.000000, 0.000000) * millimeter, vector(0.000000, 220.000000) * millimeter] });
+        skPolyline(sketch0, "poly0", { "points" : [vector(0.000000, 200.000000) * millimeter, vector(21.538500, 210.000000) * millimeter, vector(21.538500, 220.000000) * millimeter, vector(48.461500, 220.000000) * millimeter, vector(48.461500, 210.000000) * millimeter, vector(70.000000, 200.000000) * millimeter, vector(70.000000, 0.000000) * millimeter, vector(0.000000, 0.000000) * millimeter, vector(0.000000, 200.000000) * millimeter] });
         skSolve(sketch0);
         opExtractSurface(context, id + "surf0", {
-            "faces" : qContainsPoint(qSketchRegion(id + "sketch0"), vector(35.000000, 110.000000, 0.000000) * millimeter),
+            "faces" : qContainsPoint(qSketchRegion(id + "sketch0"), vector(35.000000, 105.523106, 0.000000) * millimeter),
             "excludeFillets" : false
         });
         sheetMetalStart(context, id + "smStart0", {
@@ -44,7 +44,7 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
 
         // Remaining polygon for tab 1
         var sketchRem1 = newSketchOnPlane(context, id + "sketchRem1", { "sketchPlane" : plane(vector(70.0, 220.0, 30.0) * millimeter, vector(0.0, 1.0, 0.0), vector(-1.0, 0.0, 0.0)) });
-        skPolyline(sketchRem1, "polyRem1", { "points" : [vector(0.000000, -28.000000) * millimeter, vector(70.000000, -28.000000) * millimeter, vector(70.000000, 0.000000) * millimeter, vector(80.000000, -2.000000) * millimeter, vector(80.000000, 198.000000) * millimeter, vector(70.000000, 200.000000) * millimeter, vector(0.000000, 200.000000) * millimeter, vector(0.000000, -28.000000) * millimeter] });
+        skPolyline(sketchRem1, "polyRem1", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(21.538500, -20.000000) * millimeter, vector(21.538500, -28.000000) * millimeter, vector(48.461500, -28.000000) * millimeter, vector(48.461500, -20.000000) * millimeter, vector(70.000000, 0.000000) * millimeter, vector(70.000000, 200.000000) * millimeter, vector(0.000000, 200.000000) * millimeter, vector(-10.000000, 198.000000) * millimeter, vector(-10.000000, -2.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
         skSolve(sketchRem1);
         sheetMetalTab(context, id + "smTab1", {
             "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem1"), vector(35.000000, 220.000000, 5.000000) * millimeter),

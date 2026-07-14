@@ -11,11 +11,11 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
         const bendRadius = 1.0 * millimeter;
 
         // === Root Tab 0 ===
-        var sketch0 = newSketchOnPlane(context, id + "sketch0", { "sketchPlane" : plane(vector(379.0, 0.0, 0.0) * millimeter, vector(0.0, 0.0, -1.0), vector(-1.0, 0.0, 0.0)) });
-        skPolyline(sketch0, "poly0", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(379.000000, 0.000000) * millimeter, vector(379.000000, 147.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
+        var sketch0 = newSketchOnPlane(context, id + "sketch0", { "sketchPlane" : plane(vector(140.0, 0.0, 0.0) * millimeter, vector(0.0, 0.0, -1.0), vector(-1.0, 0.0, 0.0)) });
+        skPolyline(sketch0, "poly0", { "points" : [vector(0.000000, 160.000000) * millimeter, vector(0.000000, 320.000000) * millimeter, vector(140.000000, 160.000000) * millimeter, vector(0.000000, 160.000000) * millimeter] });
         skSolve(sketch0);
         opExtractSurface(context, id + "surf0", {
-            "faces" : qContainsPoint(qSketchRegion(id + "sketch0"), vector(126.333333, 49.000000, 0.000000) * millimeter),
+            "faces" : qContainsPoint(qSketchRegion(id + "sketch0"), vector(93.333333, 213.333333, 0.000000) * millimeter),
             "excludeFillets" : false
         });
         sheetMetalStart(context, id + "smStart0", {

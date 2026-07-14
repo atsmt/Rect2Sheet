@@ -12,7 +12,7 @@ The full dataset release is available on Zenodo: https://doi.org/10.5281/zenodo.
 
 This repository contains test subsets of the dataset:
 - `dataset_test_1`: 30 designs
-- `dataset_test_2`: 610 designs
+- `dataset_test_2`: 603 designs
 
 ## Recreate this dataset or create your own new dataset
 

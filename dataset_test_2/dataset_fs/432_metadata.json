@@ -1,8 +1,8 @@
 {
   "id": 432,
-  "rectangle_id": "81_rectangle",
-  "num_rectangles": 4,
-  "has_mounts": true,
+  "rectangle_id": "13_rectangle",
+  "num_rectangles": 2,
+  "has_mounts": false,
   "allow_non_90": false,
   "has_split_tabs": false,
   "source_set": "accepted"

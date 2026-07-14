@@ -4,6 +4,6 @@
   "num_rectangles": 2,
   "has_mounts": true,
   "allow_non_90": false,
-  "has_split_tabs": true,
+  "has_split_tabs": false,
   "source_set": "accepted"
 }

@@ -67,7 +67,7 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
 
         // Remaining polygon for tab 1
         var sketchRem1b = newSketchOnPlane(context, id + "sketchRem1b", { "sketchPlane" : plane(vector(379.0, 210.0, 105.0) * millimeter, vector(0.0, 1.0, 0.0), vector(-1.0, 0.0, 0.0)) });
-        skPolyline(sketchRem1b, "polyRem1b", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(387.000000, 0.000000) * millimeter, vector(387.000000, 252.000000) * millimeter, vector(0.000000, 252.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
+        skPolyline(sketchRem1b, "polyRem1b", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(387.000000, 0.000000) * millimeter, vector(387.000000, 252.000000) * millimeter, vector(379.000000, 252.000000) * millimeter, vector(295.292500, 411.000000) * millimeter, vector(297.292500, 421.000000) * millimeter, vector(43.361400, 421.000000) * millimeter, vector(41.361400, 411.000000) * millimeter, vector(0.000000, 252.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
         skSolve(sketchRem1b);
         sheetMetalTab(context, id + "smTab1b", {
             "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem1b"), vector(-5.000000, 210.000000, 231.000000) * millimeter),
@@ -92,7 +92,7 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
 
         // Remaining polygon for tab 2
         var sketchRem2 = newSketchOnPlane(context, id + "sketchRem2", { "sketchPlane" : plane(vector(337.0, 231.0, 42.0) * millimeter, vector(0.0, -1.0, 0.0), vector(1.0, 0.0, 0.0)) });
-        skPolyline(sketchRem2, "polyRem2", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(-67.400000, -32.000000) * millimeter, vector(-67.400000, -40.000000) * millimeter, vector(-193.200000, -40.000000) * millimeter, vector(-193.200000, -32.000000) * millimeter, vector(-252.000000, 0.000000) * millimeter, vector(-252.000000, 379.000000) * millimeter, vector(-217.241400, 474.000000) * millimeter, vector(-217.241400, 482.000000) * millimeter, vector(-34.758600, 482.000000) * millimeter, vector(-34.758600, 474.000000) * millimeter, vector(0.000000, 379.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
+        skPolyline(sketchRem2, "polyRem2", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(-67.400000, -32.000000) * millimeter, vector(-67.400000, -40.000000) * millimeter, vector(-193.200000, -40.000000) * millimeter, vector(-193.200000, -32.000000) * millimeter, vector(-252.000000, 0.000000) * millimeter, vector(-252.000000, 379.000000) * millimeter, vector(0.000000, 379.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
         skSolve(sketchRem2);
         sheetMetalTab(context, id + "smTab2", {
             "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem2"), vector(206.700000, 231.000000, 5.000000) * millimeter),
@@ -100,10 +100,10 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
             "booleanOffset" : 0.0 * millimeter
         });
 
-        // === Child Tab 3 from 2 (one_bend) ===
-        // Flange 2->3: bend=90.00deg, zone=10mm
-        sheetMetalFlange(context, id + "flange2_3", {
-            "edges" : qClosestTo(qOwnedByBody(qBodyType(qCreatedBy(id + "smStart0", EntityType.BODY), BodyType.SOLID), EntityType.EDGE), vector(211.000000, 231.000000, 526.000000) * millimeter),
+        // === Child Tab 3 from 1 (one_bend) ===
+        // Flange 1->3: bend=90.00deg, zone=10mm
+        sheetMetalFlange(context, id + "flange1_3", {
+            "edges" : qClosestTo(qOwnedByBody(qBodyType(qCreatedBy(id + "smStart0", EntityType.BODY), BodyType.SOLID), EntityType.EDGE), vector(210.673050, 210.000000, 526.000000) * millimeter),
             "angleControlType" : SMFlangeAngleControlType.BEND_ANGLE,
             "bendAngle" : 90.000000 * degree,
             "limitType" : SMFlangeBoundingType.BLIND,
@@ -116,12 +116,12 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
         });
 
         // Remaining polygon for tab 3
-        var sketchRem3 = newSketchOnPlane(context, id + "sketchRem3", { "sketchPlane" : plane(vector(85.0, 189.0, 526.0) * millimeter, vector(0.0, 0.0, 1.0), vector(-1.0, 0.0, 0.0)) });
-        skPolyline(sketchRem3, "polyRem3", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(-34.758600, -32.000000) * millimeter, vector(-34.758600, -40.000000) * millimeter, vector(-217.241400, -40.000000) * millimeter, vector(-217.241400, -32.000000) * millimeter, vector(-252.000000, 0.000000) * millimeter, vector(-252.000000, 379.000000) * millimeter, vector(0.000000, 379.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
+        var sketchRem3 = newSketchOnPlane(context, id + "sketchRem3", { "sketchPlane" : plane(vector(85.0, 189.0, 526.0) * millimeter, vector(0.0, 0.0, -1.0), vector(1.0, 0.0, 0.0)) });
+        skPolyline(sketchRem3, "polyRem3", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(-1.292500, -11.000000) * millimeter, vector(-1.292500, -19.000000) * millimeter, vector(252.638600, -19.000000) * millimeter, vector(252.638600, -11.000000) * millimeter, vector(252.000000, 0.000000) * millimeter, vector(252.000000, 379.000000) * millimeter, vector(0.000000, 379.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
         skSolve(sketchRem3);
         sheetMetalTab(context, id + "smTab3", {
-            "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem3"), vector(211.000000, 226.000000, 526.000000) * millimeter),
-            "booleanUnionScope" : qClosestTo(qCreatedBy(id + "flange2_3", EntityType.FACE), vector(211.000000, 226.000000, 526.000000) * millimeter),
+            "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem3"), vector(210.673050, 205.000000, 526.000000) * millimeter),
+            "booleanUnionScope" : qClosestTo(qCreatedBy(id + "flange1_3", EntityType.FACE), vector(210.673050, 205.000000, 526.000000) * millimeter),
             "booleanOffset" : 0.0 * millimeter
         });
     });

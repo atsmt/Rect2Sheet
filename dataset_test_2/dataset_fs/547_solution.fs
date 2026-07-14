@@ -12,10 +12,10 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
 
         // === Root Tab 0 ===
         var sketch0 = newSketchOnPlane(context, id + "sketch0", { "sketchPlane" : plane(vector(0.0, 0.0, 0.0) * millimeter, vector(0.0, 0.0, 1.0), vector(1.0, 0.0, 0.0)) });
-        skPolyline(sketch0, "poly0", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(-67.000000, 120.518500) * millimeter, vector(-77.000000, 120.518500) * millimeter, vector(-77.000000, 236.844500) * millimeter, vector(-67.000000, 236.844500) * millimeter, vector(0.000000, 357.000000) * millimeter, vector(255.000000, 357.000000) * millimeter, vector(255.000000, -432.000000) * millimeter, vector(0.000000, -432.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
+        skPolyline(sketch0, "poly0", { "points" : [vector(0.000000, 200.000000) * millimeter, vector(160.000000, 200.000000) * millimeter, vector(190.000000, 141.530000) * millimeter, vector(200.000000, 141.530000) * millimeter, vector(200.000000, 75.175700) * millimeter, vector(190.000000, 75.175700) * millimeter, vector(160.000000, 0.000000) * millimeter, vector(0.000000, 0.000000) * millimeter, vector(0.000000, 200.000000) * millimeter] });
         skSolve(sketch0);
         opExtractSurface(context, id + "surf0", {
-            "faces" : qContainsPoint(qSketchRegion(id + "sketch0"), vector(115.150134, -20.646609, 0.000000) * millimeter),
+            "faces" : qContainsPoint(qSketchRegion(id + "sketch0"), vector(92.161833, 100.530235, 0.000000) * millimeter),
             "excludeFillets" : false
         });
         sheetMetalStart(context, id + "smStart0", {
@@ -27,12 +27,12 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
             "radius" : bendRadius
         });
 
-        // === Child Tab 3 from 0 (one_bend) ===
-        // Flange 0->3: bend=90.00deg, zone=10mm
-        sheetMetalFlange(context, id + "flange0_3", {
-            "edges" : qClosestTo(qOwnedByBody(qBodyType(qCreatedBy(id + "smStart0", EntityType.BODY), BodyType.SOLID), EntityType.EDGE), vector(-77.000000, 178.681500, 0.000000) * millimeter),
+        // === Child Tab 2 from 0 (one_bend) ===
+        // Flange 0->2: bend=70.06deg, zone=10mm
+        sheetMetalFlange(context, id + "flange0_2", {
+            "edges" : qClosestTo(qOwnedByBody(qBodyType(qCreatedBy(id + "smStart0", EntityType.BODY), BodyType.SOLID), EntityType.EDGE), vector(200.000000, 108.352850, 0.000000) * millimeter),
             "angleControlType" : SMFlangeAngleControlType.BEND_ANGLE,
-            "bendAngle" : 90.000000 * degree,
+            "bendAngle" : 70.062018 * degree,
             "limitType" : SMFlangeBoundingType.BLIND,
             "distance" : 10.000000 * millimeter,
             "flangeAlignment" : SMFlangeAlignment.BEND,
@@ -42,13 +42,16 @@ export const smPart = defineFeature(function(context is Context, id is Id, defin
             "oppositeDirection" : false
         });
 
-        // Remaining polygon for tab 3
-        var sketchRem3 = newSketchOnPlane(context, id + "sketchRem3", { "sketchPlane" : plane(vector(-77.0, 332.0, -102.0) * millimeter, vector(1.0, 0.0, 0.0), vector(0.0, -1.0, 0.0)) });
-        skPolyline(sketchRem3, "polyRem3", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(95.155500, -92.000000) * millimeter, vector(95.155500, -100.000000) * millimeter, vector(211.481500, -100.000000) * millimeter, vector(211.481500, -92.000000) * millimeter, vector(306.000000, 0.000000) * millimeter, vector(306.000000, 178.000000) * millimeter, vector(-25.000000, 178.000000) * millimeter, vector(-35.000000, 176.000000) * millimeter, vector(-35.000000, -2.000000) * millimeter, vector(-25.000000, 0.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
-        skSolve(sketchRem3);
-        sheetMetalTab(context, id + "smTab3", {
-            "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem3"), vector(-77.000000, 178.681500, -5.000000) * millimeter),
-            "booleanUnionScope" : qClosestTo(qCreatedBy(id + "flange0_3", EntityType.FACE), vector(-77.000000, 178.681500, -5.000000) * millimeter),
+        // Remaining polygon for tab 2
+        var wallFace2 = qClosestTo(qCreatedBy(id + "flange0_2", EntityType.FACE), vector(201.705014, 108.352850, -4.700311) * millimeter);
+        var faceN2 = evPlane(context, { "face" : wallFace2 }).normal;
+        var skN2 = dot(faceN2, vector(-0.9400622805, 0.0, -0.3410027989)) >= 0 ? faceN2 : -faceN2;
+        var sketchRem2 = newSketchOnPlane(context, id + "sketchRem2", { "sketchPlane" : plane(vector(217.0501, 60.0, -47.0031) * millimeter, skN2, vector(0.0, 1.0, 0.0)) });
+        skPolyline(sketchRem2, "polyRem2", { "points" : [vector(0.000000, 0.000000) * millimeter, vector(15.175700, -40.000004) * millimeter, vector(15.175700, -47.999973) * millimeter, vector(81.530000, -47.999973) * millimeter, vector(81.530000, -40.000004) * millimeter, vector(120.000000, 0.000000) * millimeter, vector(120.000000, 179.999989) * millimeter, vector(-20.000000, 179.999989) * millimeter, vector(-30.000000, 177.999989) * millimeter, vector(-30.000000, -2.000000) * millimeter, vector(-20.000000, 0.000000) * millimeter, vector(0.000000, 0.000000) * millimeter] });
+        skSolve(sketchRem2);
+        sheetMetalTab(context, id + "smTab2", {
+            "tabFaces" : qContainsPoint(qSketchRegion(id + "sketchRem2"), vector(217.050131, 108.352850, -47.003089) * millimeter),
+            "booleanUnionScope" : wallFace2,
             "booleanOffset" : 0.0 * millimeter
         });
     });
