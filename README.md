@@ -1,5 +1,7 @@
 # Rect2Sheet Dataset - Rectangles to Sheet-Metal Solutions
 
+<img width="3805" height="1383" alt="rect2sheet- (5)" src="https://github.com/user-attachments/assets/0162d15f-6358-478a-a0aa-285fa3c4343b" />
+
 ## Description
 
 A synthetic and manually verified dataset of **19,231 sheet-metal designs** pairing rectangle layouts with their
