@@ -12,6 +12,10 @@ SheetGen repository: https://github.com/chriswitt77/SheetGen
 
 The full dataset release is available on Zenodo: https://doi.org/10.5281/zenodo.20834240
 
+Same dataset with extra file types (eg STEP) can be found in the study _C. Wittig Adão, A. Tender, and S. Matthiesen, “SheetGen-DS: A Multi-Representation Dataset of Synthetic Sheet Metal Parts for Data-Driven Design Generation (in progress),” 2026._
+
+## Contents
+
 This repository contains test subsets of the dataset:
 - `dataset_test_1`: 30 designs
 - `dataset_test_2`: 603 designs
@@ -57,5 +61,6 @@ Synthetic pipeline in `src/dataset`, configured via `config/config.yaml`:
 
 Generated with SheetGen: https://github.com/chriswitt77/SheetGen
 
-Please cite the Rect2Sheet dataset (Zenodo DOI: https://doi.org/10.5281/zenodo.20834240) and the
-SheetGen repository when used.
+Please cite the Rect2Sheet dataset (Zenodo DOI: https://doi.org/10.5281/zenodo.20834240) and the SheetGen repository when used.
+Citation (APA):
+Tender, A. M., Wittig Adão, C., & Matthiesen, S. (2026). Rect2Sheet: A Dataset of Sheet Metal Connection Designs [Dataset]. Karlsruhe Institute of Technology. https://doi.org/10.5281/zenodo.20834240
