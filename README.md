@@ -62,5 +62,7 @@ Synthetic pipeline in `src/dataset`, configured via `config/config.yaml`:
 Generated with SheetGen: https://github.com/chriswitt77/SheetGen
 
 Please cite the Rect2Sheet dataset (Zenodo DOI: https://doi.org/10.5281/zenodo.20834240) and the SheetGen repository when used.
+
 Citation (APA):
+
 Tender, A. M., Wittig Adão, C., & Matthiesen, S. (2026). Rect2Sheet: A Dataset of Sheet Metal Connection Designs [Dataset]. Karlsruhe Institute of Technology. https://doi.org/10.5281/zenodo.20834240
