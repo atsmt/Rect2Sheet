@@ -10,7 +10,8 @@ sheet-metal solutions, plus a parallel set of discarded examples. Additionally p
 Built for training and evaluating models that turn tabs into bent parts. Generated with the
 SheetGen repository: https://github.com/chriswitt77/SheetGen
 
-The full dataset release is available on Zenodo: https://doi.org/10.5281/zenodo.20834240
+The full dataset release is available on Zenodo, however it is currently not public, as KIT is working on the final publication. For access, please contact the author:
+https://doi.org/10.5281/zenodo.20834240
 
 Same dataset with extra file types (eg STEP) can be found in the study _C. Wittig Adão, A. Tender, and S. Matthiesen, “SheetGen-DS: A Multi-Representation Dataset of Synthetic Sheet Metal Parts for Data-Driven Design Generation (in progress),” 2026._
 
